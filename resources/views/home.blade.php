@@ -20,6 +20,6 @@
             </div>
         </div>
     </div> --}}
-    <h1>HELLO WORLD</h1>
+    <h1>YOU`RE LOGGED IN</h1>
 </div>
 @endsection
