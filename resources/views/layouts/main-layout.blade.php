@@ -19,17 +19,17 @@
         rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/main.css','resources/css/util.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
     <div id="app">
         @include('components.header')
 
-        <main>
+        <main class="py-4">
             @yield('content')
         </main>
-
+        @include ("components.footer")
     </div>
 </body>
 

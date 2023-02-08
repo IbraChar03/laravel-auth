@@ -130,3 +130,63 @@
     font-size: 18px;
 
 }
+
+//login
+.main {
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container2 {
+        width: 70%;
+        background-color: white;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+
+        .cont-login {
+            width: 960px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .form-title {
+
+                font-size: 24px;
+                color: #333333;
+                line-height: 1.2;
+                text-align: center;
+                width: 100%;
+                display: block;
+                font-weight: bold;
+                padding-bottom: 54px;
+
+                #remember {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.cont-form {
+    height: 500px;
+    background-color: white;
+    width: 300px;
+}
+
+#txt-remember {
+    margin-left: 8px;
+}
