@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
@@ -9,7 +10,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 
-Route::get('/home', [MainController::class, "home"]);
+Route::get('/home', [MainController::class, "home"])->middleware(["auth", "verified"]);
 Route::get('/', [MainController::class, "welcome"]);
 
 // Login Routes
