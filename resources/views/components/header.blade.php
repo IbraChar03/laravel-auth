@@ -2,7 +2,9 @@
     <div class="container">
         <a class="navbar-brand"
             href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{-- {{ config('app.name', 'Laravel') }} --}}
+            <strong class="textSize">Ibrahim Char</strong>
+
         </a>
         <button class="navbar-toggler"
             type="button"
@@ -28,7 +30,7 @@
                 @if (Route::has('login'))
                 <li class="nav-item">
                     <a class="nav-link"
-                        href="{{ route('login') }}">{{ __('Login') }}</a>
+                        href="{{ route('login') }}">{{ __('Administrator Login') }} </a>
                 </li>
                 @endif
 
@@ -49,6 +51,7 @@
                         aria-expanded="false"
                         v-pre>
                         {{ Auth::user()->name }}
+
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-end"

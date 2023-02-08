@@ -6,3 +6,122 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+// FontAwesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+
+
+.textSize {
+    font-size: 24px;
+}
+
+.nav {
+    // height: 250px;
+    padding: 50px;
+    width: 100%;
+    background-color: black;
+
+
+    .cont {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cont-footer {
+            // background-color: red;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .cont-contacts {
+                .title {
+                    color: white;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    width: 100%;
+                    // background-color: red;
+                }
+
+
+
+                .line {
+                    display: block;
+                    height: 1px;
+                    border: 0;
+                    border-top: 1px solid white;
+                    margin: 1em 0;
+                    padding: 0;
+                    width: 120%;
+                }
+
+                ul {
+
+                    margin: 0;
+                    padding: 0;
+
+                }
+            }
+
+            .cont-socials {
+                .title {
+                    color: white;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    width: 100%;
+                    // background-color: red;
+                }
+
+
+
+                .line {
+                    display: block;
+                    height: 1px;
+                    border: 0;
+                    border-top: 1px solid white;
+                    margin: 1em 0;
+                    padding: 0;
+                    width: 150%;
+                }
+
+                ul {
+
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+
+                        .icon {
+                            margin-right: 10px;
+                            font-size: 20px;
+                        }
+                    }
+
+
+
+                }
+
+            }
+        }
+    }
+}
+
+.list {
+    list-style-type: none;
+    color: white;
+    font-size: 18px;
+
+}
