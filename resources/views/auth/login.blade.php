@@ -210,7 +210,7 @@
                     @endif
                 </div>
 
-                {{-- <div class="container-login100-form-btn">
+                <div class="container-login100-form-btn">
                     <input type="submit"
                         value="LOGIN"
                         class="login100-form-btn">
@@ -226,8 +226,7 @@
                         Password?
                     </a>
                 </div>
-                @endif --}}
-
+                @endif
 
             </form>
         </div>
