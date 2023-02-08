@@ -2,8 +2,8 @@
     <div class="container">
         <a class="navbar-brand"
             href="{{ url('/') }}">
-            {{-- {{ config('app.name', 'Laravel') }} --}}
-            <strong class="textSize">Ibrahim Char</strong>
+
+            <i class="fa-solid fa-circle icon-c"></i> <strong class="textSize"> Ibrahim Char</strong>
 
         </a>
         <button class="navbar-toggler"
