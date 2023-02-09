@@ -7,6 +7,7 @@
 
         <h1>Create a new Project</h1>
         <div class="inner-create">
+            @include("components.errors")
             <form action="{{route('project.create')}}"
                 method="POST">
                 @csrf
@@ -24,7 +25,7 @@
                     name="release_date"> <br><br>
                 <label for="repo_link">GitHub Repo Link : </label>
                 <input type="text"
-                    name="repo_link"> <br>
+                    name="repo_link"> <br> <br>
                 <input type="submit"
                     value="Create"
                     class=btn>

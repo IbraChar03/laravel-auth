@@ -376,3 +376,15 @@ main {
 
     }
 }
+
+.red {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: red;
+    margin: 20px;
+
+    ul {
+        li {
+            list-style-type: circle;
+        }
+    }
+}

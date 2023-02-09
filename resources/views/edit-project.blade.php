@@ -6,6 +6,7 @@
 
     <h1>Edit Project</h1>
     <div class="cont-project-create">
+        @include("components.errors")
         <form action="{{route('project.update',$project)}}"
             method="POST">
             @csrf

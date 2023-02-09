@@ -17,7 +17,7 @@ class MainController extends Controller
         $data = $request->validate([
             "name" => ["string", "required"],
             "description" => ["string", "required"],
-            "release_date" => ["date", "required"],
+            "release_date" => ["date", "required", 'before:tomorrow'],
             "repo_link" => ["string", "required"],
             "main_image" => ["string", "required"]
         ]);
@@ -45,11 +45,18 @@ class MainController extends Controller
     public function updateProject(Project $project, Request $request)
     {
         $data = $request->validate([
-            "name" => ["string", "required"],
+            "name" => ["string", "required", "unique:projects,name"],
             "description" => ["string", "required"],
-            "release_date" => ["date", "required"],
-            "repo_link" => ["string", "required"],
-            "main_image" => ["string", "required"]
+            "release_date" => [
+                "date",
+                "required",
+                'before:tomorrow'
+            ],
+            "repo_link" => ["string", "required", "unique:projects,repo_link"],
+            "main_image" => [
+                "string",
+                "required",
+            ]
         ]);
         $project->name = $data["name"];
         $project->description = $data["description"];
