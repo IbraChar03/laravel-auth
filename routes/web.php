@@ -18,7 +18,9 @@ Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->
 Route::get('/home/dash', [MainController::class, "dashboard"])->middleware(["auth", "verified"])->name("project.dashboard");
 
 
+
 Route::get('/', [MainController::class, "projectsWelcome"]);
+Route::get('/detail/{project}', [MainController::class, "detailProject"])->name("project.detail");
 
 // Login Routes
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');

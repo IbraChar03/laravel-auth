@@ -5,7 +5,7 @@
 
     <div class="cont-cards">
         @foreach ($projects as $project)
-        <a href=""
+        <a href="{{route('project.detail',$project)}}"
             class="card"
             data-content="{{$project -> name}}">
 

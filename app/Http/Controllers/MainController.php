@@ -73,4 +73,9 @@ class MainController extends Controller
     {
         return redirect()->route("project.all");
     }
+    public function detailProject(Project $project)
+    {
+        return view("detail-project", compact("project"));
+
+    }
 }

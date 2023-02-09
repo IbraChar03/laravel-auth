@@ -24,7 +24,7 @@
 
 .nav {
     // height: 250px;
-    padding: 50px;
+    padding: 20px;
     width: 100%;
     background-color: black;
 
@@ -35,6 +35,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
 
         .cont-footer {
             // background-color: red;
@@ -122,6 +123,7 @@
             }
         }
     }
+
 }
 
 .list {
@@ -239,62 +241,138 @@ input {
     font-weight: bold;
 }
 
-.cont {
+main {
+    margin: 50px 0px;
+
+    .cont {
+        width: 100%;
+        // height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cont-cards {
+            width: 60%;
+            height: 100%;
+            // background-color: red;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .card {
+                width: calc(47% - 5px);
+                margin: 10px;
+                height: 250px;
+                // background-color: blue;
+                position: relative;
+                text-align: center;
+
+                .imgcard {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    vertical-align: top;
+                }
+
+            }
+
+            .card:hover .text-card {
+                display: block;
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .card:after {
+                content: attr(data-content);
+                color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.6);
+                opacity: 0;
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .card:hover:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.cont-cards-detail {
     width: 100%;
-    // height: 1000px;
+    display: flex;
+    height: calc(100vh - 261px);
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .cont-cards {
+    .inner-cards-detail {
         width: 60%;
         height: 100%;
-        // background-color: red;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
 
-        .card {
-            width: calc(47% - 5px);
-            margin: 10px;
-            height: 250px;
-            // background-color: blue;
-            position: relative;
-            text-align: center;
-
-            .imgcard {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                vertical-align: top;
-            }
-
-        }
-
-        .card:hover .text-card {
-            display: block;
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .card:after {
-            content: attr(data-content);
-            color: #fff;
-            position: absolute;
+        .name {
+            height: 80px;
             width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.6);
-            opacity: 0;
-            transition: all 0.5s;
-            -webkit-transition: all 0.5s;
-            font-size: 25px;
-            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .title-prj {
+                font-size: 25px;
+                font-weight: bold;
+
+            }
         }
 
-        .card:hover:after {
-            opacity: 1;
+        .imgcont {
+            height: 60%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 100%;
+                width: 70%;
+
+            }
         }
+
+        .desc {
+            // height: 150px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .desc-prj {
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+
+        .git-cont {
+            // height: 150px;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .git {
+
+                text-decoration: none;
+                font-size: 18px;
+            }
+        }
+
     }
 }
