@@ -10,12 +10,22 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 
-Route::post('/home', [MainController::class, "createProject"])->middleware(["auth", "verified"])->name("project.create");
-Route::get('/home', [MainController::class, "allProjects"])->middleware(["auth", "verified"])->name("project.all");
-Route::get('/home/edit/{project}', [MainController::class, "editProject"])->middleware(["auth", "verified"])->name("project.edit");
-Route::post('/home/update/{project}', [MainController::class, "updateProject"])->middleware(["auth", "verified"])->name("project.update");
-Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->middleware(["auth", "verified"])->name("project.delete");
-Route::get('/home/dash', [MainController::class, "dashboard"])->middleware(["auth", "verified"])->name("project.dashboard");
+Route::middleware(['auth', 'verified'])
+    ->group(function () {
+        Route::post('/home', [MainController::class, "createProject"])->name("project.create");
+        Route::get('/home', [MainController::class, "allProjects"])->name("project.all");
+        Route::get('/home/edit/{project}', [MainController::class, "editProject"])->name("project.edit");
+        Route::post('/home/update/{project}', [MainController::class, "updateProject"])->name("project.update");
+        Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->name("project.delete");
+        Route::get('/home/dash', [MainController::class, "dashboard"])->name("project.dashboard");
+    });
+
+// Route::post('/home', [MainController::class, "createProject"])->middleware(["auth", "verified"])->name("project.create");
+// Route::get('/home', [MainController::class, "allProjects"])->middleware(["auth", "verified"])->name("project.all");
+// Route::get('/home/edit/{project}', [MainController::class, "editProject"])->middleware(["auth", "verified"])->name("project.edit");
+// Route::post('/home/update/{project}', [MainController::class, "updateProject"])->middleware(["auth", "verified"])->name("project.update");
+// Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->middleware(["auth", "verified"])->name("project.delete");
+// Route::get('/home/dash', [MainController::class, "dashboard"])->middleware(["auth", "verified"])->name("project.dashboard");
 
 
 

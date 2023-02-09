@@ -40,7 +40,7 @@
                     -> repo_link}}"> <br> <br>
             <input type="submit"
                 value="Save"
-                class=btn>
+                class=btn2>
         </form>
     </div>
 

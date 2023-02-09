@@ -28,7 +28,7 @@
                     name="repo_link"> <br> <br>
                 <input type="submit"
                     value="Create"
-                    class=btn>
+                    class=btn2>
             </form>
         </div>
     </div>

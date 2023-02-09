@@ -9,7 +9,8 @@
                         +39 384730283
                     </li>
                     <li class=list>
-                        ibrachar@gmail.com
+                        <a href="mailto: ibrachar68@gmail.com"
+                            class=list>ibrachar68@gmail.com</a>
                     </li>
                 </ul>
             </div>

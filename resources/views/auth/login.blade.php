@@ -198,17 +198,7 @@
                         @endif
                     </div>
                 </div> --}}
-                <div class="text-center p-t-12">
-                    {{-- <span class="txt1">
-                        Forgot
-                    </span> --}}
-                    @if (Route::has('password.request'))
-                    <a class="txt2"
-                        href="{{ route('password.request') }}">
-                        Forgot Password?
-                    </a>
-                    @endif
-                </div>
+
 
                 <div class="container-login100-form-btn">
                     <input type="submit"
