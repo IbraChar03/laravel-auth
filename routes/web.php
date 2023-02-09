@@ -10,7 +10,13 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 
-Route::get('/home', [MainController::class, "home"])->middleware(["auth", "verified"]);
+Route::post('/home', [MainController::class, "createProject"])->middleware(["auth", "verified"])->name("project.create");
+Route::get('/home', [MainController::class, "allProjects"])->middleware(["auth", "verified"])->name("project.all");
+Route::get('/home/edit/{project}', [MainController::class, "editProject"])->middleware(["auth", "verified"])->name("project.edit");
+Route::post('/home/update/{project}', [MainController::class, "updateProject"])->middleware(["auth", "verified"])->name("project.update");
+Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->middleware(["auth", "verified"])->name("project.delete");
+
+
 Route::get('/', [MainController::class, "welcome"]);
 
 // Login Routes

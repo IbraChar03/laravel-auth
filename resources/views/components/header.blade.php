@@ -1,11 +1,19 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand"
-            href="{{ url('/') }}">
 
-            <i class="fa-solid fa-circle icon-c"></i> <strong class="textSize"> Ibrahim Char</strong>
+        <div class="head">
+            <div class="name">
+                <i class="fa-solid fa-circle icon-c"></i> <strong class="textSize"> Ibrahim Char</strong>
+            </div>
 
-        </a>
+
+            <a class="navbar-brand"
+                href="{{ url('/') }}">
+
+                <span>Projects</span>
+
+            </a>
+        </div>
         <button class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"

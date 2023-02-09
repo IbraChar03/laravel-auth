@@ -7,12 +7,60 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function home()
-    {
-        return view("home");
-    }
+
     public function welcome()
     {
         return view("welcome");
+    }
+    public function createProject(Request $request)
+    {
+        $data = $request->validate([
+            "name" => ["string", "required"],
+            "description" => ["string", "required"],
+            "release_date" => ["date", "required"],
+            "repo_link" => ["string", "required"],
+            "main_image" => ["string", "required"]
+        ]);
+        $project = new Project();
+        $project->name = $data["name"];
+        $project->description = $data["description"];
+        $project->repo_link = $data["repo_link"];
+        $project->release_date = $data["release_date"];
+        $project->main_image = $data["main_image"];
+        $project->save();
+        return view("home", $project);
+
+    }
+    public function allProjects()
+    {
+        $projects = Project::all();
+        // dd($projects);
+        return view("home", compact("projects"));
+    }
+    public function editProject(Project $project)
+    {
+        return view("edit-project", compact("project"));
+    }
+    public function updateProject(Project $project, Request $request)
+    {
+        $data = $request->validate([
+            "name" => ["string", "required"],
+            "description" => ["string", "required"],
+            "release_date" => ["date", "required"],
+            "repo_link" => ["string", "required"],
+            "main_image" => ["string", "required"]
+        ]);
+        $project->name = $data["name"];
+        $project->description = $data["description"];
+        $project->repo_link = $data["repo_link"];
+        $project->release_date = $data["release_date"];
+        $project->main_image = $data["main_image"];
+        $project->save();
+        return redirect()->route("project.all");
+    }
+    public function deleteProject(Project $project)
+    {
+        $project->delete();
+        return redirect()->route("project.all");
     }
 }
