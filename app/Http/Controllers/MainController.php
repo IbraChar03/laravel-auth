@@ -28,7 +28,8 @@ class MainController extends Controller
         $project->release_date = $data["release_date"];
         $project->main_image = $data["main_image"];
         $project->save();
-        return view("home", $project);
+        // return view("home", $project);
+        return redirect()->route("project.all");
 
     }
     public function allProjects()
@@ -61,6 +62,15 @@ class MainController extends Controller
     public function deleteProject(Project $project)
     {
         $project->delete();
+        return redirect()->route("project.all");
+    }
+    public function projectsWelcome()
+    {
+        $projects = Project::all();
+        return view("welcome", compact("projects"));
+    }
+    public function dashboard()
+    {
         return redirect()->route("project.all");
     }
 }

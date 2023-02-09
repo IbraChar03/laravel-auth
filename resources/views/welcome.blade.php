@@ -1,9 +1,22 @@
 @extends('layouts.main-layout')
 
 @section('content')
-<div class="container">
+<div class="cont">
 
-    <h1>WELCOME</h1>
+    <div class="cont-cards">
+        @foreach ($projects as $project)
+        <a href=""
+            class="card"
+            data-content="{{$project -> name}}">
+
+            <img src="{{$project -> main_image}}"
+                alt=""
+                class=imgcard>
+
+        </a>
+        @endforeach
+
+    </div>
 
 
 </div>

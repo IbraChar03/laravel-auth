@@ -70,6 +70,12 @@
                                              document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
+                        <a class="dropdown-item"
+                            href="{{ route('project.dashboard') }}"
+                            onclick="event.preventDefault();
+                                         ">
+                            {{ __('DashBoard') }}
+                        </a>
 
                         <form id="logout-form"
                             action="{{ route('logout') }}"
