@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class MainController extends Controller
 {
@@ -19,8 +21,10 @@ class MainController extends Controller
             "description" => ["string", "required"],
             "release_date" => ["date", "required", 'before:tomorrow'],
             "repo_link" => ["string", "required"],
-            "main_image" => ["string", "required"]
+            "main_image" => ["image", "required", "max:2048"]
         ]);
+        $img_path = Storage::put('uploads', $data['main_image']);
+        $data['main_image'] = $img_path;
         $project = new Project();
         $project->name = $data["name"];
         $project->description = $data["description"];
@@ -45,19 +49,24 @@ class MainController extends Controller
     public function updateProject(Project $project, Request $request)
     {
         $data = $request->validate([
-            "name" => ["string", "required", "unique:projects,name"],
+            "name" => ["string", "required",
+            ],
             "description" => ["string", "required"],
             "release_date" => [
                 "date",
                 "required",
                 'before:tomorrow'
             ],
-            "repo_link" => ["string", "required", "unique:projects,repo_link"],
+            "repo_link" => ["string", "required",
+            ],
             "main_image" => [
-                "string",
+                "image",
                 "required",
+                "max:2048"
             ]
         ]);
+        $img_path = Storage::put('uploads', $data['main_image']);
+        $data['main_image'] = $img_path;
         $project->name = $data["name"];
         $project->description = $data["description"];
         $project->repo_link = $data["repo_link"];

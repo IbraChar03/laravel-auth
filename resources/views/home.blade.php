@@ -9,7 +9,8 @@
         <div class="inner-create">
             @include("components.errors")
             <form action="{{route('project.create')}}"
-                method="POST">
+                method="POST"
+                enctype="multipart/form-data">
                 @csrf
                 <label for="name">Name : </label>
                 <input type="text"
@@ -18,7 +19,7 @@
                 <input type="text"
                     name="description"> <br><br>
                 <label for="main_image">Image Url : </label>
-                <input type="text"
+                <input type="file"
                     name="main_image"> <br><br>
                 <label for="release_date">Release Date : </label>
                 <input type="date"

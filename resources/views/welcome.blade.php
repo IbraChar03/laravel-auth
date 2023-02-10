@@ -9,7 +9,7 @@
             class="card"
             data-content="{{$project -> name}}">
 
-            <img src="{{$project -> main_image}}"
+            <img src="{{asset('storage/' . $project -> main_image)}}"
                 alt=""
                 class=imgcard>
 

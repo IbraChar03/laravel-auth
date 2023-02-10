@@ -8,7 +8,8 @@
     <div class="cont-project-create">
         @include("components.errors")
         <form action="{{route('project.update',$project)}}"
-            method="POST">
+            method="POST"
+            enctype="multipart/form-data">
             @csrf
             <label for="name">Name : </label>
             <input type="text"
@@ -24,10 +25,8 @@
                 rows="4"
                 cols="50"><br><br>
             <label for="main_image">Image Url : </label>
-            <input type="text"
-                name="main_image"
-                value="{{$project
-                    -> main_image}}"> <br><br>
+            <input type="file"
+                name="main_image"> <br><br>
             <label for="release_date">Release Date : </label>
             <input type="date"
                 name="release_date"

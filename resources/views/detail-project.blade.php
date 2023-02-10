@@ -9,7 +9,7 @@
         </div>
         <div class="imgcont">
 
-            <img src="{{$project -> main_image}}"
+            <img src="{{asset('storage/' . $project -> main_image)}}"
                 alt=""
                 class=img-prj>
 
