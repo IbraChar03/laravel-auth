@@ -245,7 +245,7 @@ input {
     font-weight: bold;
 }
 
-main {
+.main2 {
     margin: 50px 0px;
 
     .cont {
@@ -254,6 +254,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 30px;
 
         .cont-cards {
             width: 60%;
@@ -312,77 +313,86 @@ main {
     }
 }
 
-.cont-cards-detail {
-    width: 100%;
-    display: flex;
-    height: calc(100vh - 261px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .inner-cards-detail {
-        width: 60%;
-        height: 100%;
 
-        .name {
-            height: 80px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
-            .title-prj {
-                font-size: 25px;
-                font-weight: bold;
+main {
 
+
+    .cont-cards-detail {
+        width: 100%;
+        display: flex;
+        height: calc(100vh - 261px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner-cards-detail {
+            width: 60%;
+            height: 100%;
+            margin-top: 50px;
+
+            .name {
+                height: 80px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .title-prj {
+                    font-size: 25px;
+                    font-weight: bold;
+
+                }
             }
-        }
 
-        .imgcont {
-            height: 60%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .imgcont {
+                height: 60%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            img {
-                height: 100%;
-                width: 70%;
+                img {
+                    height: 100%;
+                    width: 70%;
 
+                }
             }
-        }
 
-        .desc {
-            // height: 150px;
-            width: 100%;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .desc {
+                // height: 150px;
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            .desc-prj {
-                font-size: 18px;
-                font-weight: 300;
+                .desc-prj {
+                    font-size: 18px;
+                    font-weight: 300;
+                }
             }
-        }
 
-        .git-cont {
-            // height: 150px;
-            width: 100%;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .git-cont {
+                // height: 150px;
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            .git {
+                .git {
 
-                text-decoration: none;
-                font-size: 18px;
+                    text-decoration: none;
+                    font-size: 18px;
+                }
             }
-        }
 
+        }
     }
 }
+
 
 .red {
     background-color: rgba(255, 0, 0, 0.1);

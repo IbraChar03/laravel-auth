@@ -26,9 +26,9 @@
     <div id="app">
         @include('components.header')
 
-        <main>
+        {{-- <main> --}}
             @yield('content')
-        </main>
+            {{-- </main> --}}
         @include ("components.footer")
     </div>
 </body>

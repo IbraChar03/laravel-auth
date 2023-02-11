@@ -49,7 +49,9 @@ class MainController extends Controller
     public function updateProject(Project $project, Request $request)
     {
         $data = $request->validate([
-            "name" => ["string", "required",
+            "name" => [
+                "string",
+                "required",
             ],
             "description" => ["string", "required"],
             "release_date" => [
@@ -57,7 +59,9 @@ class MainController extends Controller
                 "required",
                 'before:tomorrow'
             ],
-            "repo_link" => ["string", "required",
+            "repo_link" => [
+                "string",
+                "required",
             ],
             "main_image" => [
                 "image",
@@ -73,6 +77,7 @@ class MainController extends Controller
         $project->release_date = $data["release_date"];
         $project->main_image = $data["main_image"];
         $project->save();
+
         return redirect()->route("project.all");
     }
     public function deleteProject(Project $project)
