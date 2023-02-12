@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="main2">
+    <div class="cont-project">
+        <span>PROJECTS</span>
+    </div>
     <div class="cont">
 
         <div class="cont-cards">

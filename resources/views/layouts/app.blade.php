@@ -23,14 +23,15 @@
 </head>
 
 <body>
-    <div id="app">
+    {{-- <div id="app"> --}}
         @include('components.header')
 
-        <main>
+        {{-- <main> --}}
             @yield('content')
-        </main>
+            {{-- </main> --}}
 
-    </div>
+        {{--
+    </div> --}}
 </body>
 
 </html>

@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navb position-fixed fixed-top">
-    <div class="container">
+<nav class="navbar-header ">
+    {{-- navbar-expand-md navbar-light bg-white shadow-sm navb position-fixed fixed-top --}}
+    <div class="container-head">
 
         <div class="head">
             <div class="name">
@@ -10,28 +11,11 @@
             <a class="navbar-brand"
                 href="{{ url('/') }}">
 
-                <span>Projects</span>
+                <span class=head-text>Projects</span>
 
             </a>
         </div>
-        <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse"
-            id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
-
-            </ul>
-
-            <!-- Right Side Of Navbar -->
+        <div class="log">
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
                 @guest
@@ -87,5 +71,16 @@
                 @endguest
             </ul>
         </div>
+        {{-- <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+
+
     </div>
 </nav>

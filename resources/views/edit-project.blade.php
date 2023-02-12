@@ -4,7 +4,7 @@
 
 <div class="container">
 
-    <h1>Edit Project</h1>
+    <h1>Edit Project</h1> <br>
     <div class="cont-project-create">
         @include("components.errors")
         <form action="{{route('project.update',$project)}}"
