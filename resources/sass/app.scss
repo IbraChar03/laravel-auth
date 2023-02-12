@@ -17,6 +17,11 @@
     margin: 0;
 }
 
+.navb {
+    height: 80px;
+
+}
+
 .textSize {
     font-size: 24px;
 }
@@ -254,7 +259,7 @@ input {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 140px;
 
         .cont-cards {
             width: 60%;
@@ -307,6 +312,103 @@ input {
 
             .card:hover:after {
                 opacity: 1;
+            }
+
+        }
+    }
+
+    .cont-contacts {
+        height: 100px;
+        width: 100%;
+        // background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+
+        span {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    }
+
+    .cont-form {
+        height: 1000px;
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8fafc;
+        // background-color: blue;
+        // margin-top: 30px;
+        margin: 30px 0px;
+
+        .form {
+            width: 40%;
+            height: 100%;
+            // background-color: red;
+            padding: 50px;
+            background-color: white;
+
+            .label {
+                color: #666;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                display: block;
+                text-align: left;
+            }
+
+            .input {
+                color: #333;
+                padding: 1rem;
+                width: 100%;
+                border: 1px solid #ebebeb;
+                font-size: 1.6rem;
+                letter-spacing: 0;
+                background: #f0f0f0;
+                border-radius: 5px;
+                font-weight: 600;
+            }
+
+            .cont-btn {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .btn-submit {
+                    // background: #facf0f;
+                    background-color: black;
+                    // color: #333;
+                    color: white;
+                    // text-transform: uppercase;
+                    letter-spacing: 1px;
+                    display: inline-block;
+                    font-weight: 700;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+                    transition: transform .3s;
+                    margin-top: 30px;
+                    border: none;
+
+                }
+
+                .btntheme {
+                    background: #facf0f;
+                    color: #111;
+
+                }
+
+                .btnsize {
+                    width: 30%;
+                    padding: 1rem;
+                    font-size: 1.6rem;
+                }
             }
 
         }

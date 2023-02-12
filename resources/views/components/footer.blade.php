@@ -2,7 +2,7 @@
     <div class="cont">
         <div class="cont-footer">
             <div class="cont-contacts">
-                <span class=title>Contact Me</span>
+                <span class=title>Contacts</span>
                 <hr class=line>
                 <ul>
                     <li class=list>

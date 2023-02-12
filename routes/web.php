@@ -18,6 +18,7 @@ Route::middleware(['auth', 'verified'])
         Route::post('/home/update/{project}', [MainController::class, "updateProject"])->name("project.update");
         Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->name("project.delete");
         Route::get('/home/dash', [MainController::class, "dashboard"])->name("project.dashboard");
+        Route::post('/home/contact', [MainController::class, "sendMessage"])->name("project.contact");
     });
 
 // Route::post('/home', [MainController::class, "createProject"])->middleware(["auth", "verified"])->name("project.create");
@@ -29,7 +30,7 @@ Route::middleware(['auth', 'verified'])
 
 
 
-Route::get('/', [MainController::class, "projectsWelcome"]);
+Route::get('/', [MainController::class, "projectsWelcome"])->name("project.welcome");
 Route::get('/detail/{project}', [MainController::class, "detailProject"])->name("project.detail");
 
 // Login Routes

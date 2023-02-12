@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -48,6 +49,9 @@ class MainController extends Controller
     }
     public function updateProject(Project $project, Request $request)
     {
+        $imageName = "";
+
+
         $data = $request->validate([
             "name" => [
                 "string",
@@ -75,7 +79,9 @@ class MainController extends Controller
         $project->description = $data["description"];
         $project->repo_link = $data["repo_link"];
         $project->release_date = $data["release_date"];
+
         $project->main_image = $data["main_image"];
+
         $project->save();
 
         return redirect()->route("project.all");
@@ -98,5 +104,19 @@ class MainController extends Controller
     {
         return view("detail-project", compact("project"));
 
+    }
+    public function sendMessage(Request $request)
+    {
+        $data = $request->validate([
+            "name" => ["required", "string"],
+            "email" => ["required", "string"],
+            "message" => ["required", "string"]
+        ]);
+        $message = new Message();
+        $message->name = $data["name"];
+        $message->email = $data["email"];
+        $message->message = $data["message"];
+        $message->save();
+        return redirect()->route("project.welcome");
     }
 }
