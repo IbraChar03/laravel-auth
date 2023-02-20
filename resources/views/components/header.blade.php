@@ -9,9 +9,15 @@
 
 
             <a class="navbar-brand"
-                href="{{ url('/') }}">
+                href="{{route('project.welcome')}}">
 
                 <span class=head-text>Projects</span>
+
+            </a>
+            <a class="navbar-brand"
+            href="{{route('project.about')}}">
+
+            <span class=head-text>About me</span>
 
             </a>
         </div>

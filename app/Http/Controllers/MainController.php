@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Storage;
 class MainController extends Controller
 {
 
-    public function welcome()
-    {
-        return view("welcome");
-    }
+    // public function welcome()
+    // {
+    //     return view("welcome");
+    // }
     public function createProject(Request $request)
     {
         $data = $request->validate([
@@ -49,8 +49,6 @@ class MainController extends Controller
     }
     public function updateProject(Project $project, Request $request)
     {
-        $imageName = "";
-
 
         $data = $request->validate([
             "name" => [
@@ -69,18 +67,22 @@ class MainController extends Controller
             ],
             "main_image" => [
                 "image",
-                "required",
+                "nullable",
                 "max:2048"
             ]
         ]);
-        $img_path = Storage::put('uploads', $data['main_image']);
-        $data['main_image'] = $img_path;
+        if (array_key_exists("main_image", $data)) {
+            $img_path = Storage::put('uploads', $data['main_image']);
+            $data['main_image'] = $img_path;
+        }
+
         $project->name = $data["name"];
         $project->description = $data["description"];
         $project->repo_link = $data["repo_link"];
         $project->release_date = $data["release_date"];
-
-        $project->main_image = $data["main_image"];
+        if (array_key_exists("main_image", $data)) {
+            $project->main_image = $data["main_image"];
+        }
 
         $project->save();
 
@@ -118,5 +120,13 @@ class MainController extends Controller
         $message->message = $data["message"];
         $message->save();
         return redirect()->route("project.welcome");
+    }
+    public function name()
+    {
+        return view("name");
+    }
+    public function about()
+    {
+        return view("about");
     }
 }

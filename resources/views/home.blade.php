@@ -45,9 +45,11 @@
                         href="{{route('project.delete',$project)}}"><i class="fa-solid fa-trash-can icon"></i></a>
                 </li> <br>
 
-                @endforeach
+                @endforeach 
             </ul>
+           
         </div>
+        
     </div>
 
 

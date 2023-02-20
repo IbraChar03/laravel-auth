@@ -21,17 +21,10 @@ Route::middleware(['auth', 'verified'])
         Route::post('/home/contact', [MainController::class, "sendMessage"])->name("project.contact");
     });
 
-// Route::post('/home', [MainController::class, "createProject"])->middleware(["auth", "verified"])->name("project.create");
-// Route::get('/home', [MainController::class, "allProjects"])->middleware(["auth", "verified"])->name("project.all");
-// Route::get('/home/edit/{project}', [MainController::class, "editProject"])->middleware(["auth", "verified"])->name("project.edit");
-// Route::post('/home/update/{project}', [MainController::class, "updateProject"])->middleware(["auth", "verified"])->name("project.update");
-// Route::get('/home/delete/{project}', [MainController::class, "deleteProject"])->middleware(["auth", "verified"])->name("project.delete");
-// Route::get('/home/dash', [MainController::class, "dashboard"])->middleware(["auth", "verified"])->name("project.dashboard");
-
-
-
-Route::get('/', [MainController::class, "projectsWelcome"])->name("project.welcome");
+Route::get('/projects', [MainController::class, "projectsWelcome"])->name("project.welcome");
 Route::get('/detail/{project}', [MainController::class, "detailProject"])->name("project.detail");
+Route::get('/', [MainController::class, "name"])->name("project.name");
+Route::get('/aboutme', [MainController::class, "about"])->name("project.about");
 
 // Login Routes
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
