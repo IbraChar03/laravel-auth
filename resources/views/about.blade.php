@@ -11,7 +11,7 @@
                 <span class=desc2> <strong>Hi, my name is Ibrahim Char, i'm 20 years old and i`m a Junior Full Stack Web Developer.</strong>  </span>
             </div>
             <div class="cont-prj">
-                <span class=desc>I live in Gorla Maggiore in the province of Varese, I graduated from high school in July 2022 in computer science and telecommunications and after that I started a 6-month course to become Junior Full Stack Web Developer. </span>
+                <span class=desc>I live in Gorla Maggiore in the province of Varese, I graduated from high school in July 2022 in computer science and telecommunications and after that I started a 6 month course to become Junior Full Stack Web Developer. </span>
             </div>
             <div class="cont-soc2">
                 <span class=desc><strong>Check out my <a href="https://www.linkedin.com/in/ibrahim-char-251b29209/" target="_blank">LinkedIn Profile</a></strong></span>
