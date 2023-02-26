@@ -86,7 +86,7 @@
                 
             </div>
             <div class="return-cont">
-                <a class="btn-submit btntheme btnsize" href="{{route('project.welcome')}}">RETURN ON PROJECTS PAGE</a> 
+                <a class="btn-submit btntheme btnsize" href="{{route('project.welcome')}}"><strong>Home</strong>  </a> 
             </div>
             
         </div>

@@ -24,8 +24,8 @@
       
     </div>
     <div class=cont-other>
-       <div class="cont-btn2">
-            <a class="btn-submit btntheme btnsize" href="https://github.com/IbraChar03?tab=repositories" target="_blank">Other Projects on GitHub</a> </div>
+       <div class="cont-btn3">
+            <a class="btn-submit2 btntheme2 btnsize2" href="https://github.com/IbraChar03?tab=repositories" target="_blank">Other Projects on GitHub</a> </div>
         
     </div>
     <div class="cont-contacts">

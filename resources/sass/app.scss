@@ -375,7 +375,7 @@ input {
         align-items: center;
         margin-top: 40px;
 
-        .cont-btn2 {
+        .cont-btn3 {
             width: 55%;
             height: 50px;
             display: flex;
@@ -386,7 +386,7 @@ input {
                 text-decoration: none;
             }
 
-            .btn-submit {
+            .btn-submit2 {
                 // background: #facf0f;
                 background-color: black;
                 // color: #333;
@@ -403,16 +403,17 @@ input {
 
             }
 
-            .btntheme {
+            .btntheme2 {
                 background: #facf0f;
                 color: #111;
 
             }
 
-            .btnsize {
+            .btnsize2 {
                 width: 30%;
                 padding: 1rem;
                 font-size: 1.6rem;
+                text-align: center;
             }
         }
     }
@@ -1121,6 +1122,7 @@ main {
 
     .btn-submit {
         // background: #facf0f;
+        font-weight: bold;
         background-color: black;
         // color: #333;
         color: white;
@@ -1140,13 +1142,15 @@ main {
     .btntheme {
         background: #facf0f;
         color: #111;
+        font-weight: bold;
 
     }
 
     .btnsize {
-        // width: 15%;
-        // padding: 0.5rem;
+        width: 15%;
+        padding: 0.5rem;
         font-size: 1.6rem;
         padding: 10px;
+        font-weight: bold;
     }
 }

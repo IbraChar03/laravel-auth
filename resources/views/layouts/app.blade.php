@@ -27,10 +27,9 @@
     {{-- <div id="app"> --}}
         @include('components.header')
 
-        {{-- <main> --}}
+    
             @yield('content')
-            {{-- </main> --}}
-
+            
         {{--
     </div> --}}
 </body>
